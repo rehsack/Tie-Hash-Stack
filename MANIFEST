@@ -1,0 +1,14 @@
+MANIFEST
+Makefile.PL
+README
+Stack.pm
+t/01new.t
+t/02push_hash.t
+t/03pop_hash.t
+t/04unshift_hash.t
+t/05shift_hash.t
+t/06iter.t
+t/07merge_hash.t
+t/08flatten_hash.t
+t/09get_depth.t
+t/10reverse_hash.t
