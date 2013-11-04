@@ -1,5 +1,3 @@
-#!/usr/bin/perl -w
-
 package Tie::Hash::Stack;
 
 #=============================================================================
@@ -20,15 +18,14 @@ package Tie::Hash::Stack;
 use strict;
 use Carp;
 
-BEGIN {
-    use Exporter   ();
-    use vars       qw($VERSION @ISA @EXPORT %EXPORT_TAGS);
-    $VERSION     = sprintf( "%d.%02d", '$Revision: 0.9 $' =~ /\s(\d+)\.(\d+)/ );
-    @ISA         = qw(Exporter);
-    @EXPORT      = qw(push_hash pop_hash shift_hash unshift_hash
-		      reverse_hash merge_hash flatten_hash get_depth);
-    %EXPORT_TAGS = ( );
-}
+use Exporter   ();
+use vars       qw($VERSION @ISA @EXPORT %EXPORT_TAGS);
+
+$VERSION     = "0.100";
+@ISA         = qw(Exporter);
+@EXPORT      = qw(push_hash pop_hash shift_hash unshift_hash
+		  reverse_hash merge_hash flatten_hash get_depth);
+%EXPORT_TAGS = ( );
 
 sub TIEHASH {
     my $self = shift;
@@ -274,7 +271,7 @@ If all hashes are removed, the stack is reset with an empty hash.
 Complimentary functions of C<pop_hash> and C<push_hash>; removes the
 hash at the front of the stack, or adds a new hash to the front of
 the stack. C<unshift_hash> also takes a similar optional second
-arguement as with C<push_hash>.
+argument as with C<push_hash>.
 
 =item C<merge_hash>
 
