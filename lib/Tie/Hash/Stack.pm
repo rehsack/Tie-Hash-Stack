@@ -21,7 +21,7 @@ use Carp;
 use Exporter   ();
 use vars       qw($VERSION @ISA @EXPORT %EXPORT_TAGS);
 
-$VERSION     = "0.100";
+$VERSION     = "0.101";
 @ISA         = qw(Exporter);
 @EXPORT      = qw(push_hash pop_hash shift_hash unshift_hash
 		  reverse_hash merge_hash flatten_hash get_depth);
